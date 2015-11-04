@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36D410AB1BE97B1100111D8F /* launch_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D410AA1BE97B1100111D8F /* launch_background.png */; settings = {ASSET_TAGS = (); }; };
+		36E275741BE9B8E000E28ED2 /* launch_background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36E275731BE9B8E000E28ED2 /* launch_background1.jpg */; settings = {ASSET_TAGS = (); }; };
 		730ED6DE1B3BA3DA0041F888 /* touch_mid.wav in Resources */ = {isa = PBXBuildFile; fileRef = 730ED6DD1B3BA3DA0041F888 /* touch_mid.wav */; };
 		730ED6E01B3BA6FD0041F888 /* Defined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730ED6DF1B3BA6FD0041F888 /* Defined.swift */; };
 		731F6F4A1B3D001100B8D89A /* button_retry_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 731F6F481B3D001100B8D89A /* button_retry_up.png */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		36D410AA1BE97B1100111D8F /* launch_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_background.png; sourceTree = "<group>"; };
+		36E275731BE9B8E000E28ED2 /* launch_background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch_background1.jpg; sourceTree = "<group>"; };
 		730ED6DD1B3BA3DA0041F888 /* touch_mid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = touch_mid.wav; sourceTree = "<group>"; };
 		730ED6DF1B3BA6FD0041F888 /* Defined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defined.swift; sourceTree = "<group>"; };
 		731F6F481B3D001100B8D89A /* button_retry_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_up.png; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				733263DE1B33C5E9003A3B2F /* human1.png */,
 				733263DF1B33C5E9003A3B2F /* human2.png */,
 				36D410AA1BE97B1100111D8F /* launch_background.png */,
+				36E275731BE9B8E000E28ED2 /* launch_background1.jpg */,
 			);
 			name = Images;
 			path = Assets/Images;
@@ -247,6 +250,7 @@
 				73B7AD641B33BEC400115CAD /* Main.storyboard in Resources */,
 				733263DD1B33C592003A3B2F /* victory.wav in Resources */,
 				36D410AB1BE97B1100111D8F /* launch_background.png in Resources */,
+				36E275741BE9B8E000E28ED2 /* launch_background1.jpg in Resources */,
 				731F6F581B3D17D000B8D89A /* highScore.wav in Resources */,
 				731F6F4C1B3D041600B8D89A /* button_retry_down.png in Resources */,
 				731F6F4A1B3D001100B8D89A /* button_retry_up.png in Resources */,
