@@ -7,6 +7,8 @@
 //
 
 import SpriteKit
+import GoogleMobileAds
+import UIKit
 
 class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     var gameOver = false {
@@ -20,6 +22,8 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    var interstitial: GADInterstitial?
+
     let StackHeight:CGFloat = 400.0
     let StackMaxWidth:CGFloat = 300.0
     let StackMinWidth:CGFloat = 100.0
@@ -74,6 +78,10 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         super.init(size: size)
         anchorPoint = CGPointMake(0.5, 0.5)
         physicsWorld.contactDelegate = self
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func didMoveToView(view: SKView) {
@@ -144,6 +152,10 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         loadScoreBackground()
         loadScore()
         //loadTip()
+        /*
+        if (interstitial!.isReady) {
+            interstitial!.presentFromRootViewController(GameViewController)
+        }*/
         loadGameOverLayer()
  
         leftStack = loadStacks(false, startLeftPoint: playAbleRect.origin.x)
@@ -155,6 +167,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         rightStack = loadStacks(false, startLeftPoint: nextLeftStartX + gap)
         
         gameOver = false
+        
     }
     
     func restart() {
@@ -165,6 +178,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         nextLeftStartX = 0
         removeAllChildren()
         start()
+        
     }
     
     private func checkPass() -> Bool {
@@ -306,9 +320,6 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
         })
     }
   
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 
 //MARK: - load node
@@ -478,6 +489,12 @@ private extension StickHeroGameScene {
         highScore.horizontalAlignmentMode = .Center
         highScore.setScale(0)
         node.addChild(highScore)
+       
+        /*if (interstitial!.isReady) {
+            interstitial!.presentFromRootViewController(GameViewController)
+        }*/
+        
+        
     }
     
     //MARK: - Action
