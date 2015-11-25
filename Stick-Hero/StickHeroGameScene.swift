@@ -23,8 +23,8 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     var interstitial: GADInterstitial?
-
-    let StackHeight:CGFloat = 400.0
+    
+    let StackHeight:CGFloat = 650.0
     let StackMaxWidth:CGFloat = 300.0
     let StackMinWidth:CGFloat = 100.0
     let gravity:CGFloat = -100.0
@@ -171,7 +171,6 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func restart() {
-        //记录分数
         isBegin = false
         isEnd = false
         score = 0
@@ -396,8 +395,8 @@ private extension StickHeroGameScene {
             perfect.text = "Perfect +1"
             perfect.name = StickHeroGameSceneChildName.PerfectName.rawValue
             perfect.position = CGPointMake(0, -100)
-            perfect.fontColor = SKColor.blackColor()
-            perfect.fontSize = 50
+            perfect.fontColor = SKColor.whiteColor()
+            perfect.fontSize = 75
             perfect.zPosition = StickHeroGameSceneZposition.PerfectZposition.rawValue
             perfect.horizontalAlignmentMode = .Center
             perfect.alpha = 0
@@ -489,11 +488,6 @@ private extension StickHeroGameScene {
         highScore.horizontalAlignmentMode = .Center
         highScore.setScale(0)
         node.addChild(highScore)
-       
-        /*if (interstitial!.isReady) {
-            interstitial!.presentFromRootViewController(GameViewController)
-        }*/
-        
         
     }
     
@@ -511,5 +505,8 @@ private extension StickHeroGameScene {
            emitter?.runAction(wait)
         })
     }
+    
+
+
 
 }

@@ -45,6 +45,20 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
+        self.interstitial = createAndLoadInterstitial()
+        
+        
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        //interstitial.delegate = self <--- ERROR
+        interstitial.loadRequest(GADRequest())
+        return interstitial
+    }
+    
+    func interstitialDidDismissScreen (interstitial: GADInterstitial) {
+        self.interstitial = createAndLoadInterstitial()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,6 +67,7 @@ class GameViewController: UIViewController {
         musicPlayer = setupAudioPlayerWithFile("bg_country", type: "mp3")
         musicPlayer.numberOfLoops = -1
         musicPlayer.play()
+        
         
     }
     
